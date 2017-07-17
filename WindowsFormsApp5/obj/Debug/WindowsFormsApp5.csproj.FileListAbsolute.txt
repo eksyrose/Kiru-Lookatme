@@ -11,3 +11,16 @@ C:\Users\agatl\Desktop\super\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\GMap.NE
 C:\Users\agatl\Desktop\super\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\GMap.NET.WindowsForms.dll
 C:\Users\agatl\Desktop\super\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\GMap.NET.Core.xml
 C:\Users\agatl\Desktop\super\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe.config
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.exe
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\WindowsFormsApp5.pdb
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\GMap.NET.Core.xml
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\GMap.NET.WindowsForms.xml
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csprojResolveAssemblyReference.cache
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Form1.resources
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Properties.Resources.resources
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.csproj.GenerateResource.Cache
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.exe
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Form2.resources
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\Npgsql.dll

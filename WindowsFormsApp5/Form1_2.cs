@@ -18,22 +18,21 @@ namespace WindowsFormsApp5
         GMap.NET.WindowsForms.GMapOverlay markersOverlay;
         public Form1()
         {
-
             InitializeComponent();
             markersOverlay = new GMap.NET.WindowsForms.GMapOverlay("marker");
-            dataGridView1.Rows.Clear();
-            List<String> data = DataBase.Work();
-            foreach (string s in data) dataGridView1.Rows.Add(s);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tempDataSet3.base666". При необходимости она может быть перемещена или удалена.
-           // this.base666TableAdapter2.Fill(this.tempDataSet3.base666);
+            this.base666TableAdapter2.Fill(this.tempDataSet3.base666);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tempDataSet2.base666". При необходимости она может быть перемещена или удалена.
-          //  this.base666TableAdapter1.Fill(this.tempDataSet2.base666);
+            this.base666TableAdapter1.Fill(this.tempDataSet2.base666);
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tempDataSet.goroda". При необходимости она может быть перемещена или удалена.
-           // this.gorodaTableAdapter.Fill(this.tempDataSet.goroda);
+            this.gorodaTableAdapter.Fill(this.tempDataSet.goroda);
+            
+            //Настройки для компонента GMap.
             gMapControl1.Bearing = 0;
             //CanDragMap - Если параметр установлен в True,
             //пользователь может перетаскивать карту
@@ -86,8 +85,8 @@ namespace WindowsFormsApp5
             //gMapControl1.Manager.ImportFromGMDB
             //gMapControl1.ShowExportDialog
             //gMapControl1.CacheLocation
-            //label1.Text = gMapControl1.CacheLocation;
             //gMapControl1.LevelsKeepInMemmory
+            //gMapControl1.
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
@@ -98,73 +97,9 @@ namespace WindowsFormsApp5
             gMapControl1.Zoom = gMapControl1.Zoom + 1; //костылик :) чтобы карта не глючила
             gMapControl1.Zoom = gMapControl1.Zoom - 1;
             markersOverlay = new GMap.NET.WindowsForms.GMapOverlay("marker");
-            
-            Show_same_markers();
-            Refresh_labels();
-        }
-
-        public double[] GetCoords(string crds)  // преобразование координат из строки в 2 числа double
-        {
-            double[] res = new double[2];
-            CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
-            ci.NumberFormat.NumberDecimalSeparator = ".";
-            //MessageBox.Show(crds.Length + crds.IndexOf(' ').ToString() + (crds.Length - crds.IndexOf(' ')).ToString());
-            string s = crds.Substring(crds.IndexOf(' ') + 1, crds.Length - crds.IndexOf(' ') - 1);
-            int t = crds.IndexOf(' ') + 1;
-            int tt = crds.Length - crds.IndexOf(' ') - 1;
-            int ttt = crds.IndexOf(',');
-
-            res[0] = Convert.ToDouble(crds.Substring(0, crds.IndexOf(',')), ci);
-            res[1] = Convert.ToDouble(crds.Substring(crds.IndexOf(' ')+1, crds.Length-crds.IndexOf(' ')-1), ci);
-            return res;
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2();
-            f.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Clear();
-            List<String> data = DataBase.Work();
-            foreach (string s in data) dataGridView1.Rows.Add(s);
-        }
-
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            Refresh_labels();
-        }
-        public void Refresh_labels() //обновляем надписи 
-        {
-            StringBuilder s = new StringBuilder();
-            try
-            {
-                s.Append(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-                s.Append(dataGridView1.SelectedRows[0].Cells[1].Value.ToString());
-
-            }
-            catch (Exception ex)
-            { }
-            finally
-            {
-                label2.Text = s.ToString();
-            }
-        }
-        public void Show_same_markers() //отображает на карте города с той же датой, как и у выделенного
-        {
-            if ((dataGridView1.RowCount != 0) && (dataGridView1.Columns.Count >= 12) && (dataGridView1.CurrentRow.Cells[12].Value.ToString() != "")) //если таблица не пуста, ячеек >=12 и у выбранного города указаны координаты
+            //foreach (GMap.NET.WindowsForms.Markers.GMapMarkerCross m in )
+            //MessageBox.Show(dataGridView1.CurrentRow.Cells[12].Value.ToString());
+            if (dataGridView1.CurrentRow.Cells[12].Value.ToString() != "") //если у данного города указаны координаты
             {
                 string coords = dataGridView1.CurrentRow.Cells[12].Value.ToString();
                 string name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -182,7 +117,7 @@ namespace WindowsFormsApp5
                 markerR.ToolTipMode = GMap.NET.WindowsForms.MarkerTooltipMode.Always;
                 markersOverlay.Markers.Add(markerR);
                 //GMap.NET.WindowsForms.Markers.GMapMarkerCross
-                //GMap.NET.WindowsForms.GMapMarker
+                    //GMap.NET.WindowsForms.GMapMarker
 
                 //List<DataGridViewRow> matched_rows = new List<DataGridViewRow>();
                 if (dataGridView1.CurrentRow.Cells[4].Value.ToString() != "") //если дата проставлена у выбранного города
@@ -200,11 +135,11 @@ namespace WindowsFormsApp5
                             {
                                 GMarkerGoogle markerG = new GMarkerGoogle(new PointLatLng(GetCoords(row.Cells[12].Value.ToString())[0],
                                         GetCoords(row.Cells[12].Value.ToString())[1]), SystemIcons.Hand.ToBitmap());
-
+                                
                                 //GMap.NET.WindowsForms.Markers.GMapMarkerGoogleGreen markerG =
-                                //new GMap.NET.WindowsForms.Markers.GMapMarkerGoogleGreen(
-                                //  new GMap.NET.PointLatLng(GetCoords(row.Cells[12].Value.ToString())[0],
-                                //    GetCoords(row.Cells[12].Value.ToString())[1]));
+                                    //new GMap.NET.WindowsForms.Markers.GMapMarkerGoogleGreen(
+                                  //  new GMap.NET.PointLatLng(GetCoords(row.Cells[12].Value.ToString())[0],
+                                    //    GetCoords(row.Cells[12].Value.ToString())[1]));
                                 markerG.ToolTip =
                                     new GMap.NET.WindowsForms.ToolTips.GMapRoundedToolTip(markerG);
 
@@ -223,6 +158,22 @@ namespace WindowsFormsApp5
                 gMapControl1.Zoom = gMapControl1.Zoom + 1; //костылик :) чтобы карта не глючила
                 gMapControl1.Zoom = gMapControl1.Zoom - 1;
             }
+        }
+
+        public double[] GetCoords(string crds)  // преобразование координат из строки в 2 числа double
+        {
+            double[] res = new double[2];
+            CultureInfo ci = (CultureInfo)CultureInfo.CurrentCulture.Clone();
+            ci.NumberFormat.NumberDecimalSeparator = ".";
+            //MessageBox.Show(crds.Length + crds.IndexOf(' ').ToString() + (crds.Length - crds.IndexOf(' ')).ToString());
+            string s = crds.Substring(crds.IndexOf(' ') + 1, crds.Length - crds.IndexOf(' ') - 1);
+            int t = crds.IndexOf(' ') + 1;
+            int tt = crds.Length - crds.IndexOf(' ') - 1;
+            int ttt = crds.IndexOf(',');
+
+            res[0] = Convert.ToDouble(crds.Substring(0, crds.IndexOf(',')), ci);
+            res[1] = Convert.ToDouble(crds.Substring(crds.IndexOf(' ')+1, crds.Length-crds.IndexOf(' ')-1), ci);
+            return res;
         }
     }
 }
