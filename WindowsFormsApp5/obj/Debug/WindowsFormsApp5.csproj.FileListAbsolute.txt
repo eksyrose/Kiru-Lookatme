@@ -24,3 +24,6 @@ C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsA
 C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.pdb
 C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Form2.resources
 C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\Npgsql.dll
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.Form3.resources
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.FormDelete.resources
+C:\Users\Lilia\Desktop\WindowsFormsApp5\WindowsFormsApp5\obj\Debug\WindowsFormsApp5.FormConnect.resources
