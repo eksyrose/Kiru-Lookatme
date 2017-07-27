@@ -16,18 +16,85 @@ namespace WindowsFormsApp5
     public partial class Form1 : Form
     {
         GMap.NET.WindowsForms.GMapOverlay markersOverlay;
+        List<string> cells_to_database = new List<string>();
+        int usermode = 1;
         public Form1()
         {
             FormConnect f = new FormConnect();
             f.ShowDialog();
             InitializeComponent();
             markersOverlay = new GMap.NET.WindowsForms.GMapOverlay("marker");
+            Init_list();
             dataGridView1.Columns[1].HeaderText = (DateTime.Today.Year - 1).ToString();
             dataGridView1.Columns[2].HeaderText = (DateTime.Today.Year).ToString();
             LoadDataInDataGrid1(); 
         }
 
-        public void LoadDataInDataGrid1() //загрузка данных в датагрид1
+        private void Init_list()
+        {
+            cells_to_database.Add("town");
+            cells_to_database.Add("0");
+            cells_to_database.Add("date");
+            cells_to_database.Add("status_dati");
+            cells_to_database.Add("status_zayavki");
+            cells_to_database.Add("podacha_s");
+            cells_to_database.Add("prazdnik");
+            cells_to_database.Add("znachenie");
+            cells_to_database.Add("chislennost");
+            cells_to_database.Add("kogda_proverit");
+            cells_to_database.Add("rasstoyanie");
+            cells_to_database.Add("oblast");
+            cells_to_database.Add("arenda");
+            cells_to_database.Add("gas_rasreshen");
+            cells_to_database.Add("dlina_prazdnika");
+            cells_to_database.Add("town_id");
+            cells_to_database.Add("zayavka_id");
+            cells_to_database.Add("coordinates");
+        }
+
+        private void SwitchUserMode() //переключение режима отображения данных в зависимости от выбранного пункта
+        {
+            switch (usermode)
+            {
+                case 1:
+                    dataGridView1.Columns[1].Visible = true;
+                    dataGridView1.Columns[3].Visible = true;
+                    dataGridView1.Columns[4].Visible = false;
+                    dataGridView1.Columns[5].Visible = false;
+                    dataGridView1.Columns[9].Visible = false;
+                    dataGridView1.Columns[12].Visible = false;
+                    dataGridView1.Columns[13].Visible = false;
+                    dataGridView1.Columns[14].Visible = false;
+                    break;
+                case 2:
+                    dataGridView1.Columns[1].Visible = false;
+                    dataGridView1.Columns[3].Visible = false;
+                    dataGridView1.Columns[4].Visible = true;
+                    dataGridView1.Columns[5].Visible = true;
+                    dataGridView1.Columns[9].Visible = true;
+                    dataGridView1.Columns[12].Visible = false;
+                    dataGridView1.Columns[13].Visible = false;
+                    dataGridView1.Columns[14].Visible = false;
+                    break;
+                case 3:
+                    dataGridView1.Columns[1].Visible = false;
+                    dataGridView1.Columns[3].Visible = true;
+                    dataGridView1.Columns[4].Visible = true;
+                    dataGridView1.Columns[5].Visible = false;
+                    dataGridView1.Columns[9].Visible = false;
+                    dataGridView1.Columns[12].Visible = true;
+                    dataGridView1.Columns[13].Visible = true;
+                    dataGridView1.Columns[14].Visible = true;
+                    break;
+            }
+           /* if (usermode == 1)
+            {
+                dataGridView1.Columns[0].Visible = false;
+            }*/
+
+        }
+
+        public void LoadDataInDataGrid1() //загрузка данных в датагрид
         {
             Npgsql.NpgsqlDataReader reader = null;
             string q = "select * from public.towns" +
@@ -53,8 +120,10 @@ namespace WindowsFormsApp5
                     //res.Add(reader.GetString(1));
                     object[] val = new object[30];
                     reader.GetValues(val);
-                    dataGridView1.Rows.Add(val[1], val[25], val[12], val[14], val[13], val[3], val[6], val[7], val[2], val[9], val[8]);
-                    // }                   //0город, 1дата, 2датаэтотгод, 3стат.д., 4праздн, 5зн., 6числ., 7расст., 8обл., 9ид заявки, 10координаты
+                    //dataGridView1.Rows.Add(val[1], val[25], val[12], val[14], val[13], val[3], val[6], val[7], val[2], val[9], val[8]);
+                    // }                 //0город, 1дата, 2датаэтотгод, 3стат.д., 4праздн, 5зн., 6числ., 7расст., 8обл., 9ид заявки, 10координаты
+                    dataGridView1.Rows.Add(val[1], val[25], val[12], val[14], val[15], val[16], val[13], val[3], val[6], val[18], val[7], val[2], val[20], val[17], val[19], val[0], val[9], val[8]);
+                    // }                 //0город, 1дата, 2датаэтгод, 3стат.д., 4стат.з,5под_с, 6пра., 7знач.,  8чи.,  9пров.,   10рас,  11обл,   12ар,    13газ,   14про,  15t,   16ид з, 17координаты
                     // catch { }
                 }
             }
@@ -181,7 +250,7 @@ namespace WindowsFormsApp5
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            Refresh_labels();
+            //Refresh_labels();
         }
         public void Refresh_labels() //обновляем надписи 
         {
@@ -189,10 +258,10 @@ namespace WindowsFormsApp5
             try
             {
                 s.Append(dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + ", ");
-                s.Append(dataGridView1.SelectedRows[0].Cells[5].Value.ToString() + ", ");
+                s.Append(dataGridView1.SelectedRows[0].Cells[3].Value.ToString() + ", ");
                 s.Append(dataGridView1.SelectedRows[0].Cells[6].Value.ToString() + " чел., ");
                 s.Append(dataGridView1.SelectedRows[0].Cells[7].Value.ToString() + ", ");
-                s.Append(dataGridView1.SelectedRows[0].Cells[8].Value.ToString() + " область");
+                s.Append(dataGridView1.SelectedRows[0].Cells[2].Value.ToString() + " область");
             }
             catch (Exception ex)
             { }
@@ -203,9 +272,9 @@ namespace WindowsFormsApp5
         }
         public void Show_same_markers() //отображает на карте города с той же датой, как и у выделенного
         {
-            if ((dataGridView1.RowCount != 0) && (dataGridView1.Columns.Count >= 10) && (dataGridView1.CurrentRow.Cells[10].Value.ToString() != "")) //если таблица не пуста, ячеек >=12 и у выбранного города указаны координаты
+            if ((dataGridView1.RowCount != 0) && (dataGridView1.Columns.Count >= 16) && (dataGridView1.CurrentRow.Cells[17].Value.ToString() != "")) //если таблица не пуста, ячеек >=12 и у выбранного города указаны координаты
             {
-                string coords = dataGridView1.CurrentRow.Cells[10].Value.ToString();
+                string coords = dataGridView1.CurrentRow.Cells[17].Value.ToString();
                 string name = dataGridView1.CurrentRow.Cells[0].Value.ToString();
                 //string s = coords.Substring(0, coords.IndexOf(',') - 1);
 
@@ -230,15 +299,15 @@ namespace WindowsFormsApp5
                     {
                         if ((row.Cells[2].Value != null) && //дата не нулл
                             (!dataGridView1.CurrentRow.Cells[0].Value.ToString().Equals(row.Cells[0].Value.ToString())) && //названия не совпадают (т.е. это не та же строка, по которой кликнули)
-                            (row.Cells[10].Value.ToString() != "") && //координаты есть
+                            (row.Cells[17].Value.ToString() != "") && //координаты есть
                             (row.Cells[2].Value.ToString().Equals(dataGridView1.CurrentRow.Cells[2].Value.ToString()))) //и совпали даты 
                         {
                             //matched_rows.Add(row);
                             //Инициализация нового ЗЕЛЕНОГО маркера, с указанием его координат.
-                            if (row.Cells[10].Value != null)
+                            if (row.Cells[17].Value != null)
                             {
-                                GMarkerGoogle markerG = new GMarkerGoogle(new PointLatLng(GetCoords(row.Cells[10].Value.ToString())[0],
-                                        GetCoords(row.Cells[10].Value.ToString())[1]), SystemIcons.Hand.ToBitmap());
+                                GMarkerGoogle markerG = new GMarkerGoogle(new PointLatLng(GetCoords(row.Cells[17].Value.ToString())[0],
+                                        GetCoords(row.Cells[17].Value.ToString())[1]), SystemIcons.Hand.ToBitmap());
 
                                 //GMap.NET.WindowsForms.Markers.GMapMarkerGoogleGreen markerG =
                                 //new GMap.NET.WindowsForms.Markers.GMapMarkerGoogleGreen(
@@ -249,7 +318,7 @@ namespace WindowsFormsApp5
 
                                 //Указываем, что подсказку маркера, необходимо отображать всегда.
                                 markerG.ToolTipMode = GMap.NET.WindowsForms.MarkerTooltipMode.Always;
-                                markerG.ToolTipText = row.Cells[1].Value.ToString();
+                                markerG.ToolTipText = row.Cells[0].Value.ToString();
                                 markersOverlay.Markers.Add(markerG);
                             }
                         }
@@ -268,15 +337,15 @@ namespace WindowsFormsApp5
         {
             Npgsql.NpgsqlDataReader reader = null;
             if ((dataGridView1.SelectedRows[0].Cells[0].Value.ToString() != "") && 
-                (dataGridView1.SelectedRows[0].Cells[8].Value.ToString() != "") &&
-                (dataGridView1.SelectedRows[0].Cells[5].Value.ToString() != ""))
+                (dataGridView1.SelectedRows[0].Cells[11].Value.ToString() != "") &&
+                (dataGridView1.SelectedRows[0].Cells[7].Value.ToString() != ""))
             {
                 //try
                // {
                     string q = "select town, town_id from public.towns where town='" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() +
                         "' and oblast='" +
-                        dataGridView1.SelectedRows[0].Cells[8].Value.ToString()
-                        + "' and znachenie='" + dataGridView1.SelectedRows[0].Cells[5].Value.ToString() + "';";
+                        dataGridView1.SelectedRows[0].Cells[11].Value.ToString()
+                        + "' and znachenie='" + dataGridView1.SelectedRows[0].Cells[7].Value.ToString() + "';";
                 if (DataBase.Start(q) != null) //если удалось подключиться
                     reader = DataBase.Start(q).ExecuteReader();
                 else //если не удалось подключиться, т.к. были введены неправильные данные
@@ -302,18 +371,66 @@ namespace WindowsFormsApp5
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows[0].Cells[9].Value.ToString() != "")
+            if (dataGridView1.SelectedRows[0].Cells[16].Value.ToString() != "")
             {
                 FormDelete f = new FormDelete();
                 if (f.ShowDialog() == DialogResult.OK)
                 {
                     string q = "delete from public.zayavki where zayavka_id='" +
-                        dataGridView1.SelectedRows[0].Cells[9].Value.ToString() + "';";
+                        dataGridView1.SelectedRows[0].Cells[16].Value.ToString() + "';";
                     DataBase.Work(q);
                     LoadDataInDataGrid1();
                 }
             }
             else MessageBox.Show("Тут и так нет заявки!");   
+        }
+
+       /* private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true) usermode = 1;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true) usermode = 2;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton3.Checked == true) usermode = 3;
+        }*/
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true) dataGridView1.Columns[17].Visible = true;
+            else dataGridView1.Columns[17].Visible = false;
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true) usermode = 1;
+            if (radioButton2.Checked == true) usermode = 2;
+            if (radioButton3.Checked == true) usermode = 3;
+            SwitchUserMode();
+            LoadDataInDataGrid1();
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true) usermode = 1;
+            if (radioButton2.Checked == true) usermode = 2;
+            if (radioButton3.Checked == true) usermode = 3;
+            SwitchUserMode();
+            LoadDataInDataGrid1();
+        }
+
+        private void radioButton3_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked == true) usermode = 1;
+            if (radioButton2.Checked == true) usermode = 2;
+            if (radioButton3.Checked == true) usermode = 3;
+            SwitchUserMode();
+            LoadDataInDataGrid1();
         }
     }
 }

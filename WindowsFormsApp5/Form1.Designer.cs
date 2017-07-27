@@ -44,28 +44,35 @@
             this.tempDataSet3 = new WindowsFormsApp5.tempDataSet3();
             this.base666TableAdapter2 = new WindowsFormsApp5.tempDataSet3TableAdapters.base666TableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tempDataSet)).BeginInit();
@@ -78,8 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempDataSet3)).BeginInit();
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
@@ -161,14 +166,21 @@
             this.Column2,
             this.Column3,
             this.Column4,
+            this.Column12,
+            this.Column14,
             this.Column5,
             this.Column6,
             this.Column7,
+            this.Column15,
             this.Column8,
             this.Column9,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
             this.Column10,
             this.Column11});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 45);
             this.dataGridView1.MinimumSize = new System.Drawing.Size(800, 0);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -200,51 +212,6 @@
             this.panel1.Size = new System.Drawing.Size(263, 259);
             this.panel1.TabIndex = 4;
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(16, 12);
-            this.tabControl1.MinimumSize = new System.Drawing.Size(800, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(988, 216);
-            this.tabControl1.TabIndex = 5;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(980, 190);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Прозвон дат";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(980, 190);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Прозвон заявок";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(980, 190);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Визуализация";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -265,6 +232,16 @@
             this.tabControl2.Size = new System.Drawing.Size(856, 243);
             this.tabControl2.TabIndex = 7;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(848, 217);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "О заявке";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label2);
@@ -284,19 +261,9 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 0;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(848, 217);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "О заявке";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1010, 61);
+            this.button1.Location = new System.Drawing.Point(791, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 23);
             this.button1.TabIndex = 8;
@@ -306,7 +273,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1010, 90);
+            this.button2.Location = new System.Drawing.Point(863, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 23);
             this.button2.TabIndex = 9;
@@ -316,7 +283,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1010, 32);
+            this.button3.Location = new System.Drawing.Point(720, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(65, 23);
             this.button3.TabIndex = 10;
@@ -326,7 +293,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1010, 119);
+            this.button4.Location = new System.Drawing.Point(935, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(65, 23);
             this.button4.TabIndex = 11;
@@ -334,15 +301,63 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(20, 13);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(89, 17);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Прозвон дат";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(123, 13);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(108, 17);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.Text = "Прозвон заявок";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged_1);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(243, 13);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(97, 17);
+            this.radioButton3.TabIndex = 14;
+            this.radioButton3.Text = "Визуализация";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(504, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(153, 17);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Показывать координаты";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "Город";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "2016";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -354,6 +369,18 @@
             this.Column4.HeaderText = "Статус даты";
             this.Column4.Name = "Column4";
             // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Статус заявки";
+            this.Column12.Name = "Column12";
+            this.Column12.Visible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Подача заявки с";
+            this.Column14.Name = "Column14";
+            this.Column14.Visible = false;
+            // 
             // Column5
             // 
             this.Column5.HeaderText = "Праздник";
@@ -363,11 +390,18 @@
             // 
             this.Column6.HeaderText = "Значение";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Числ-ть";
             this.Column7.Name = "Column7";
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Когда проверить заявку";
+            this.Column15.Name = "Column15";
+            this.Column15.Visible = false;
             // 
             // Column8
             // 
@@ -378,11 +412,38 @@
             // 
             this.Column9.HeaderText = "Область";
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Аренда";
+            this.Column16.Name = "Column16";
+            this.Column16.Visible = false;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Разреш. ли газ?";
+            this.Column17.Name = "Column17";
+            this.Column17.Visible = false;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "Продолж. праздника";
+            this.Column18.Name = "Column18";
+            this.Column18.Visible = false;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "town_id";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Visible = false;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "zayavka_id";
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             this.Column10.Visible = false;
             // 
             // Column11
@@ -395,16 +456,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1243, 662);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1200, 700);
+            this.MinimumSize = new System.Drawing.Size(1259, 700);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -418,8 +484,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempDataSet3)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -444,10 +508,6 @@
         private System.Windows.Forms.BindingSource base666BindingSource2;
         private tempDataSet3TableAdapters.base666TableAdapter base666TableAdapter2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage4;
@@ -457,15 +517,26 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
