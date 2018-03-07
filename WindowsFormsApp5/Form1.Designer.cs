@@ -40,23 +40,41 @@
             this.base666BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.base666TableAdapter1 = new WindowsFormsApp5.tempDataSet2TableAdapters.base666TableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tempDataSet3 = new WindowsFormsApp5.tempDataSet3();
             this.base666BindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tempDataSet3 = new WindowsFormsApp5.tempDataSet3();
             this.base666TableAdapter2 = new WindowsFormsApp5.tempDataSet3TableAdapters.base666TableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.городDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.гDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.гDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.гDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.прозвонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.администрацияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.значениеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.численностьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.расстояниеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.областьDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.районDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.координатыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tempDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gorodaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource)).BeginInit();
@@ -64,9 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tempDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tempDataSet3)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tempDataSet
@@ -102,9 +122,11 @@
             this.gMapControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gMapControl1.Bearing = 0F;
             this.gMapControl1.CanDragMap = true;
+            this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
             this.gMapControl1.GrayScaleMode = false;
+            this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemmory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(67, 30);
+            this.gMapControl1.Location = new System.Drawing.Point(53, 52);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaximumSize = new System.Drawing.Size(300, 300);
             this.gMapControl1.MaxZoom = 2;
@@ -115,8 +137,10 @@
             this.gMapControl1.PolygonsEnabled = true;
             this.gMapControl1.RetryLoadTile = 0;
             this.gMapControl1.RoutesEnabled = true;
+            this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(150, 150);
+            this.gMapControl1.Size = new System.Drawing.Size(156, 150);
             this.gMapControl1.TabIndex = 2;
             this.gMapControl1.Zoom = 0D;
             // 
@@ -136,38 +160,45 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.городDataGridViewTextBoxColumn,
-            this.гDataGridViewTextBoxColumn,
-            this.гDataGridViewTextBoxColumn1,
-            this.гDataGridViewTextBoxColumn2,
-            this.прозвонDataGridViewTextBoxColumn,
-            this.администрацияDataGridViewTextBoxColumn,
-            this.значениеDataGridViewTextBoxColumn,
-            this.численностьDataGridViewTextBoxColumn,
-            this.расстояниеDataGridViewTextBoxColumn,
-            this.областьDataGridViewTextBoxColumn,
-            this.районDataGridViewTextBoxColumn,
-            this.координатыDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.base666BindingSource2;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 12);
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column12,
+            this.Column14,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column15,
+            this.Column8,
+            this.Column9,
+            this.Column16,
+            this.Column17,
+            this.Column18,
+            this.Column19,
+            this.Column10,
+            this.Column11});
+            this.dataGridView1.Location = new System.Drawing.Point(16, 45);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(800, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(898, 150);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(974, 181);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
-            // tempDataSet3
-            // 
-            this.tempDataSet3.DataSetName = "tempDataSet3";
-            this.tempDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // base666BindingSource2
             // 
             this.base666BindingSource2.DataMember = "base666";
             this.base666BindingSource2.DataSource = this.tempDataSet3;
+            // 
+            // tempDataSet3
+            // 
+            this.tempDataSet3.DataSetName = "tempDataSet3";
+            this.tempDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // base666TableAdapter2
             // 
@@ -176,105 +207,270 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.gMapControl1);
-            this.panel1.Location = new System.Drawing.Point(13, 168);
+            this.panel1.Location = new System.Drawing.Point(894, 267);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(277, 219);
+            this.panel1.Size = new System.Drawing.Size(263, 259);
             this.panel1.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn1
+            // label1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "№";
-            this.dataGridViewTextBoxColumn1.HeaderText = "№";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1121, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Комментарий";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // городDataGridViewTextBoxColumn
+            // tabControl2
             // 
-            this.городDataGridViewTextBoxColumn.DataPropertyName = "город";
-            this.городDataGridViewTextBoxColumn.HeaderText = "город";
-            this.городDataGridViewTextBoxColumn.Name = "городDataGridViewTextBoxColumn";
+            this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Location = new System.Drawing.Point(16, 244);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(856, 243);
+            this.tabControl2.TabIndex = 7;
             // 
-            // гDataGridViewTextBoxColumn
+            // tabPage5
             // 
-            this.гDataGridViewTextBoxColumn.DataPropertyName = "2015г";
-            this.гDataGridViewTextBoxColumn.HeaderText = "2015г";
-            this.гDataGridViewTextBoxColumn.Name = "гDataGridViewTextBoxColumn";
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(848, 217);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "О заявке";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // гDataGridViewTextBoxColumn1
+            // tabPage4
             // 
-            this.гDataGridViewTextBoxColumn1.DataPropertyName = "2016г";
-            this.гDataGridViewTextBoxColumn1.HeaderText = "2016г";
-            this.гDataGridViewTextBoxColumn1.Name = "гDataGridViewTextBoxColumn1";
+            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(848, 217);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "О городе";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // гDataGridViewTextBoxColumn2
+            // label2
             // 
-            this.гDataGridViewTextBoxColumn2.DataPropertyName = "2017г";
-            this.гDataGridViewTextBoxColumn2.HeaderText = "2017г";
-            this.гDataGridViewTextBoxColumn2.Name = "гDataGridViewTextBoxColumn2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 0;
             // 
-            // прозвонDataGridViewTextBoxColumn
+            // button1
             // 
-            this.прозвонDataGridViewTextBoxColumn.DataPropertyName = "прозвон";
-            this.прозвонDataGridViewTextBoxColumn.HeaderText = "прозвон";
-            this.прозвонDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "недозвон",
-            "перезвон",
-            "отправление заявки",
-            "ожидание",
-            "одобрено",
-            "отказ"});
-            this.прозвонDataGridViewTextBoxColumn.Name = "прозвонDataGridViewTextBoxColumn";
-            this.прозвонDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.прозвонDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.button1.Location = new System.Drawing.Point(791, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(66, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "+ город";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // администрацияDataGridViewTextBoxColumn
+            // button2
             // 
-            this.администрацияDataGridViewTextBoxColumn.DataPropertyName = "Администрация";
-            this.администрацияDataGridViewTextBoxColumn.HeaderText = "Администрация";
-            this.администрацияDataGridViewTextBoxColumn.Name = "администрацияDataGridViewTextBoxColumn";
+            this.button2.Location = new System.Drawing.Point(863, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(66, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "+ заявка";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // значениеDataGridViewTextBoxColumn
+            // button3
             // 
-            this.значениеDataGridViewTextBoxColumn.DataPropertyName = "значение";
-            this.значениеDataGridViewTextBoxColumn.HeaderText = "значение";
-            this.значениеDataGridViewTextBoxColumn.Name = "значениеDataGridViewTextBoxColumn";
+            this.button3.Location = new System.Drawing.Point(720, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(65, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Обновить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // численностьDataGridViewTextBoxColumn
+            // button4
             // 
-            this.численностьDataGridViewTextBoxColumn.DataPropertyName = "численность";
-            this.численностьDataGridViewTextBoxColumn.HeaderText = "численность";
-            this.численностьDataGridViewTextBoxColumn.Name = "численностьDataGridViewTextBoxColumn";
+            this.button4.Location = new System.Drawing.Point(935, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(65, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "- заявка";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // расстояниеDataGridViewTextBoxColumn
+            // radioButton1
             // 
-            this.расстояниеDataGridViewTextBoxColumn.DataPropertyName = "Расстояние";
-            this.расстояниеDataGridViewTextBoxColumn.HeaderText = "Расстояние";
-            this.расстояниеDataGridViewTextBoxColumn.Name = "расстояниеDataGridViewTextBoxColumn";
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(20, 13);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(89, 17);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Прозвон дат";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
-            // областьDataGridViewTextBoxColumn
+            // radioButton2
             // 
-            this.областьDataGridViewTextBoxColumn.DataPropertyName = "область";
-            this.областьDataGridViewTextBoxColumn.HeaderText = "область";
-            this.областьDataGridViewTextBoxColumn.Name = "областьDataGridViewTextBoxColumn";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(123, 13);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(108, 17);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.Text = "Прозвон заявок";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged_1);
             // 
-            // районDataGridViewTextBoxColumn
+            // radioButton3
             // 
-            this.районDataGridViewTextBoxColumn.DataPropertyName = "район";
-            this.районDataGridViewTextBoxColumn.HeaderText = "район";
-            this.районDataGridViewTextBoxColumn.Name = "районDataGridViewTextBoxColumn";
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(243, 13);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(97, 17);
+            this.radioButton3.TabIndex = 14;
+            this.radioButton3.Text = "Визуализация";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
             // 
-            // координатыDataGridViewTextBoxColumn
+            // checkBox1
             // 
-            this.координатыDataGridViewTextBoxColumn.DataPropertyName = "координаты";
-            this.координатыDataGridViewTextBoxColumn.HeaderText = "координаты";
-            this.координатыDataGridViewTextBoxColumn.Name = "координатыDataGridViewTextBoxColumn";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(504, 12);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(153, 17);
+            this.checkBox1.TabIndex = 15;
+            this.checkBox1.Text = "Показывать координаты";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Город";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "2016";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "2017";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Статус даты";
+            this.Column4.Name = "Column4";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Статус заявки";
+            this.Column12.Name = "Column12";
+            this.Column12.Visible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Подача заявки с";
+            this.Column14.Name = "Column14";
+            this.Column14.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Праздник";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Значение";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Числ-ть";
+            this.Column7.Name = "Column7";
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Когда проверить заявку";
+            this.Column15.Name = "Column15";
+            this.Column15.Visible = false;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Расст-е";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Область";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Аренда";
+            this.Column16.Name = "Column16";
+            this.Column16.Visible = false;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Разреш. ли газ?";
+            this.Column17.Name = "Column17";
+            this.Column17.Visible = false;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "Продолж. праздника";
+            this.Column18.Name = "Column18";
+            this.Column18.Visible = false;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "town_id";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Visible = false;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "zayavka_id";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "coordinates";
+            this.Column11.Name = "Column11";
+            this.Column11.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 422);
-            this.Controls.Add(this.panel1);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1243, 662);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(1259, 700);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -285,10 +481,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tempDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.base666BindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tempDataSet3)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -308,19 +508,37 @@
         private System.Windows.Forms.BindingSource base666BindingSource2;
         private tempDataSet3TableAdapters.base666TableAdapter base666TableAdapter2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn городDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn гDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn гDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn гDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn прозвонDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn администрацияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn значениеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn численностьDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn расстояниеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn областьDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn районDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn координатыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }
 
